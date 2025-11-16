@@ -37,9 +37,9 @@ podSecurityContext: {}
 securityContext:
   runAsUser: 0
   fsGroup: 0
-  capabilities:
-    drop:
-    - ALL
+  # capabilities:
+  #   drop:
+  #   - ALL
   readOnlyRootFilesystem: true
   runAsNonRoot: true
 
@@ -106,4 +106,3 @@ readinessProbe:
   timeoutSeconds: 3
   failureThreshold: 3
   successThreshold: 1
-
