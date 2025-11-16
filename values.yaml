@@ -159,7 +159,7 @@ config:
   # Environment variables to be set in the container
   env:
     - name: DATABASE_URL
-      value: "postgresql://admin:admin@postgres-service:5432/postgres"
+      value: "postgresql://admin:admin@postgres:5432/postgres"
     - name: POSTGRES_USER
       value: "admin"
     - name: POSTGRES_PASSWORD
@@ -203,7 +203,7 @@ config:
     
     # Database configuration
     database:
-      host: "postgres-service"
+      host: "postgres"
       port: 5432
       name: "postgres"
       username: "admin"
