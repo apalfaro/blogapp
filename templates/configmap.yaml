@@ -1,0 +1,14 @@
+{{- range .Values.config.configMaps }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .name }}
+  labels:
+    {{- include "besvc.labels" $ | nindent 4 }}
+data:
+  {{- range $key, $value := .data }}
+  {{ $key }}: |
+    {{ $value | nindent 4 }}
+  {{- end }}
+{{- end }}
